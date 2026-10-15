@@ -35,6 +35,29 @@ This repo holds many independent npm packages, one folder per package.
 - One test file per module in `tests/`, runnable with `npm test`.
 - Every package ships `README.md` (install + API + examples) and `LICENSE`.
 
+## Package tiers
+
+Every package picks one tier and meets its full bar before publish.
+`strkit` is the advanced reference implementation.
+
+- Basic — one small job, one or two files (example: a slug-only helper).
+  Needs: `package.json`, entry file, a few tests, short README, `LICENSE`.
+- Intermediate — several related modules (example: a date or color kit).
+  Needs everything in basic, plus: `src/<domain>/` split, one test file
+  per module, full README with install + API + examples, `engines` set.
+- Advanced — a full toolkit like `strkit`.
+  Needs everything in intermediate, plus: deep-import `exports` map,
+  runtime discovery docs (`help()` or equivalent), `files` whitelist,
+  `prepublishOnly` test guard.
+
+Rules for new packages:
+
+- A new package means a new folder. Never nest a package inside another.
+- Packages never import each other with relative paths. Test them together
+  only through `package-playground/` using `file:` installs.
+- A package can move up a tier later; the checklist above decides what
+  is still missing.
+
 ## Publishing
 
 Publishing is manual. Follow `PUBLISH.md` in the root.

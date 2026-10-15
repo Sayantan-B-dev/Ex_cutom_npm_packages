@@ -24,7 +24,7 @@ npm whoami   # must print your npm username
 
 ## Publish steps
 
-Run inside the package folder (example: `tiny-string-kit/`):
+Run inside the package folder (example: `strkit/`):
 
 ```bash
 npm test

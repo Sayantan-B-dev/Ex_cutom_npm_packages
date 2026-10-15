@@ -1,4 +1,4 @@
-/** Similarity / fuzzy helpers. Deep import: `strkit-sbdev/similarity`. */
+/** Similarity / fuzzy helpers. Deep import: `strkit/similarity`. */
 import { assertString } from "../_internal/guards.js";
 
 export const CATEGORY = "similarity";

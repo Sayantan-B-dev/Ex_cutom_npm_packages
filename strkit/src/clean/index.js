@@ -1,4 +1,4 @@
-/** Cleaning / normalizing helpers. Deep import: `strkit-sbdev/clean`. */
+/** Cleaning / normalizing helpers. Deep import: `strkit/clean`. */
 import { assertString } from "../_internal/guards.js";
 
 export const CATEGORY = "clean";

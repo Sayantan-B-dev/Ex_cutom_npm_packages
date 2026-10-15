@@ -1,4 +1,4 @@
-/** Measure / count helpers. Deep import: `strkit-sbdev/measure`. */
+/** Measure / count helpers. Deep import: `strkit/measure`. */
 import { assertString } from "../_internal/guards.js";
 
 export const CATEGORY = "measure";

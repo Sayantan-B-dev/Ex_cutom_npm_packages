@@ -1,4 +1,4 @@
-/** Encoding helpers (UTF-8 safe, Node + browser). Deep import: `strkit-sbdev/encode`. */
+/** Encoding helpers (UTF-8 safe, Node + browser). Deep import: `strkit/encode`. */
 import { assertString } from "../_internal/guards.js";
 import { bytesFromString, stringFromBytes } from "../_internal/encoding.js";
 import { isBase64 } from "../validate/index.js";

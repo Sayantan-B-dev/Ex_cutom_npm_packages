@@ -1,4 +1,4 @@
-/** Extract / search helpers. Deep import: `strkit-sbdev/extract`. */
+/** Extract / search helpers. Deep import: `strkit/extract`. */
 import { assertString } from "../_internal/guards.js";
 
 export const CATEGORY = "extract";

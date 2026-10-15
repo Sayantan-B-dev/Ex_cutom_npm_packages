@@ -1,4 +1,4 @@
-/** Templating helpers. Deep import: `strkit-sbdev/template`. */
+/** Templating helpers. Deep import: `strkit/template`. */
 import { assertString } from "../_internal/guards.js";
 
 export const CATEGORY = "template";

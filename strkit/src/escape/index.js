@@ -1,4 +1,4 @@
-/** Escaping helpers. Deep import: `strkit-sbdev/escape`. */
+/** Escaping helpers. Deep import: `strkit/escape`. */
 import { assertString } from "../_internal/guards.js";
 import { escapeRegExpCore } from "../_internal/regex.js";
 

@@ -1,4 +1,4 @@
-/** Case conversion helpers. Deep import: `strkit-sbdev/case`. */
+/** Case conversion helpers. Deep import: `strkit/case`. */
 import { assertString } from "../_internal/guards.js";
 import { splitIntoWords } from "../_internal/words.js";
 import { escapeRegExpCore } from "../_internal/regex.js";

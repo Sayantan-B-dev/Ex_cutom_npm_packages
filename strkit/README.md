@@ -5,7 +5,7 @@
 
 - ✅ Zero dependencies — works in **Node 18+** and modern **browsers** (ESM)
 - ✅ Modular source: `src/case`, `src/clean`, `src/validate`, … (no giant file)
-- ✅ Tree-shaking friendly **deep imports** (`strkit-sbdev/case`)
+- ✅ Tree-shaking friendly **deep imports** (`strkit/case`)
 - ✅ Runtime discovery: `help()`, `help("slugify")`, `help("case")`
 - ✅ Unicode-aware, emoji-safe, crypto-backed randomness where it matters
 
@@ -59,7 +59,7 @@
 ### From npm (once published)
 
 ```bash
-npm install strkit-sbdev
+npm install strkit
 ```
 
 ### From a local folder (monorepo / `file:` dependency)
@@ -67,7 +67,7 @@ npm install strkit-sbdev
 ```bash
 npm install file:../strkit
 # package.json then contains:
-# "dependencies": { "strkit-sbdev": "file:../strkit" }
+# "dependencies": { "strkit": "file:../strkit" }
 ```
 
 ### From git
@@ -79,7 +79,7 @@ npm install github:<owner>/strkit
 ### Verify the install
 
 ```bash
-node -e "import('strkit-sbdev').then(m => console.log(m.listFunctions().length))"
+node -e "import('strkit').then(m => console.log(m.listFunctions().length))"
 # 105
 ```
 
@@ -87,7 +87,7 @@ node -e "import('strkit-sbdev').then(m => console.log(m.listFunctions().length))
 > `import()`:
 >
 > ```js
-> const { slugify } = await import("strkit-sbdev");
+> const { slugify } = await import("strkit");
 > ```
 
 ---
@@ -95,7 +95,7 @@ node -e "import('strkit-sbdev').then(m => console.log(m.listFunctions().length))
 ## 3. Quick start
 
 ```js
-import { slugify, capitalize, truncate } from "strkit-sbdev";
+import { slugify, capitalize, truncate } from "strkit";
 
 console.log(slugify("My First npm Package!"));
 // "my-first-npm-package"
@@ -115,7 +115,7 @@ import {
   isEmail, wordCount, extractEmails, humanize,
   template, toBase64, similarity, maskEmail,
   randomString, help,
-} from "strkit-sbdev";
+} from "strkit";
 
 console.log(kebabCase("HelloWorldFoo"));            // "hello-world-foo"
 console.log(collapseWhitespace("  too   much \n space ")); // "too much space"
@@ -140,7 +140,7 @@ console.log(typeof help());                         // "string" (and the catalog
 You never need to memorize this README. At runtime:
 
 ```js
-import { help, listFunctions, listCategories, describe } from "strkit-sbdev";
+import { help, listFunctions, listCategories, describe } from "strkit";
 
 console.log(help());
 // ── prints the FULL catalog, grouped by category ──
@@ -190,7 +190,7 @@ REPLs, CLIs, and log files alike.
 ### A. Whole kit (simplest)
 
 ```js
-import { slugify, isEmail, uuid } from "strkit-sbdev";
+import { slugify, isEmail, uuid } from "strkit";
 ```
 
 ### B. Deep imports (smallest bundles — recommended for frontends)
@@ -199,24 +199,24 @@ Every folder is a public subpath:
 
 | Import path | Gives you |
 |---|---|
-| `strkit-sbdev/case` | 15 case-conversion helpers |
-| `strkit-sbdev/clean` | 8 cleaning helpers |
-| `strkit-sbdev/escape` | 4 escaping helpers |
-| `strkit-sbdev/fit` | 4 truncate/pad helpers |
-| `strkit-sbdev/validate` | 20 validators |
-| `strkit-sbdev/measure` | 7 measure/count helpers |
-| `strkit-sbdev/extract` | 12 extract/search helpers |
-| `strkit-sbdev/transform` | 14 transform helpers |
-| `strkit-sbdev/template` | 2 templating helpers |
-| `strkit-sbdev/encode` | 4 encoding helpers |
-| `strkit-sbdev/similarity` | 4 similarity helpers |
-| `strkit-sbdev/mask` | 3 mask/redact helpers |
-| `strkit-sbdev/id` | 4 random/id/hash helpers |
-| `strkit-sbdev/help` | `help`, `listFunctions`, `listCategories`, `describe` |
+| `strkit/case` | 15 case-conversion helpers |
+| `strkit/clean` | 8 cleaning helpers |
+| `strkit/escape` | 4 escaping helpers |
+| `strkit/fit` | 4 truncate/pad helpers |
+| `strkit/validate` | 20 validators |
+| `strkit/measure` | 7 measure/count helpers |
+| `strkit/extract` | 12 extract/search helpers |
+| `strkit/transform` | 14 transform helpers |
+| `strkit/template` | 2 templating helpers |
+| `strkit/encode` | 4 encoding helpers |
+| `strkit/similarity` | 4 similarity helpers |
+| `strkit/mask` | 3 mask/redact helpers |
+| `strkit/id` | 4 random/id/hash helpers |
+| `strkit/help` | `help`, `listFunctions`, `listCategories`, `describe` |
 
 ```js
-import { slugify } from "strkit-sbdev/case";
-import { isEmail } from "strkit-sbdev/validate";
+import { slugify } from "strkit/case";
+import { isEmail } from "strkit/validate";
 
 console.log(slugify("Hello World!")); // "hello-world"
 console.log(isEmail("a@b.com"));      // true
@@ -225,7 +225,7 @@ console.log(isEmail("a@b.com"));      // true
 ### C. Namespace access
 
 ```js
-import { categories } from "strkit-sbdev";
+import { categories } from "strkit";
 
 console.log(categories.case.slugify("Hi There")); // "hi-there"
 console.log(categories.validate.isUrl("https://x.com")); // true
@@ -234,7 +234,7 @@ console.log(categories.validate.isUrl("https://x.com")); // true
 ### D. Default import (whole kit as one object)
 
 ```js
-import kit from "strkit-sbdev";
+import kit from "strkit";
 
 console.log(kit.camelCase("hello world")); // "helloWorld"
 ```
@@ -601,7 +601,7 @@ Design rules:
 ### Blog post pipeline: title → slug, excerpt, reading time
 
 ```js
-import { slugify, truncateWords, readingTimeMinutes, ordinal } from "strkit-sbdev";
+import { slugify, truncateWords, readingTimeMinutes, ordinal } from "strkit";
 
 const title = "  Hello, World! My FIRST Post  ";
 const body = "word ".repeat(400);
@@ -615,7 +615,7 @@ console.log(`This is my ${ordinal(1)} post!`);    // "This is my 1st post!"
 ### Comment moderation: censor + blank check
 
 ```js
-import { isBlank, censor } from "strkit-sbdev";
+import { isBlank, censor } from "strkit";
 
 function publishComment(raw) {
   if (isBlank(raw)) return { ok: false, error: "Empty comment" };
@@ -631,7 +631,7 @@ console.log(publishComment("This is SPAM, a total scam"));
 ### Log redaction: mask secrets before writing
 
 ```js
-import { maskEmail, mask } from "strkit-sbdev";
+import { maskEmail, mask } from "strkit";
 
 console.log(maskEmail("ops-team@example.com"));   // "o*******@example.com"
 console.log(mask("sk-live-abc123", { visibleStart: 3, visibleEnd: 2 }));
@@ -641,7 +641,7 @@ console.log(mask("sk-live-abc123", { visibleStart: 3, visibleEnd: 2 }));
 ### Search box: typo-tolerant matching
 
 ```js
-import { fuzzyIncludes } from "strkit-sbdev";
+import { fuzzyIncludes } from "strkit";
 
 const products = ["headphones", "phone case", "charger"];
 console.log(products.filter(p => fuzzyIncludes(p, "hedphones")));
@@ -651,7 +651,7 @@ console.log(products.filter(p => fuzzyIncludes(p, "hedphones")));
 ### CSV export: quote cells safely
 
 ```js
-import { escapeCsv } from "strkit-sbdev";
+import { escapeCsv } from "strkit";
 
 const rows = [["Ada", 'Says "hi", loudly']];
 console.log(rows.map(r => r.map(escapeCsv).join(",")).join("\n"));

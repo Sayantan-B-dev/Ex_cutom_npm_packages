@@ -1,4 +1,4 @@
-/** Random / ids / hash helpers. Deep import: `strkit-sbdev/id`. */
+/** Random / ids / hash helpers. Deep import: `strkit/id`. */
 import { assertString } from "../_internal/guards.js";
 import { randomFloat } from "../_internal/random.js";
 

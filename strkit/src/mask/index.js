@@ -1,4 +1,4 @@
-/** Mask / redact helpers. Deep import: `strkit-sbdev/mask`. */
+/** Mask / redact helpers. Deep import: `strkit/mask`. */
 import { assertString } from "../_internal/guards.js";
 import { escapeRegExp } from "../escape/index.js";
 

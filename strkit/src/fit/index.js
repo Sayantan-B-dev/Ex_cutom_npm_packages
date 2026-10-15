@@ -1,4 +1,4 @@
-/** Truncate / pad helpers. Deep import: `strkit-sbdev/fit`. */
+/** Truncate / pad helpers. Deep import: `strkit/fit`. */
 import { assertString, assertNonNegativeInt } from "../_internal/guards.js";
 
 export const CATEGORY = "fit";

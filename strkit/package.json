@@ -1,5 +1,5 @@
 {
-  "name": "strkit-sbdev",
+  "name": "strkit",
   "version": "2.1.0",
   "description": "Advanced, dependency-free JavaScript string toolkit (100+ helpers with built-in help())",
   "type": "module",

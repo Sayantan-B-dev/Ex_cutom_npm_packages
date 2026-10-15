@@ -1,4 +1,4 @@
-/** Validation / predicate helpers. Deep import: `strkit-sbdev/validate`. */
+/** Validation / predicate helpers. Deep import: `strkit/validate`. */
 import { assertString } from "../_internal/guards.js";
 
 export const CATEGORY = "validate";

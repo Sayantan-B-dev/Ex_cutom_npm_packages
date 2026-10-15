@@ -1,4 +1,4 @@
-/** Transform helpers. Deep import: `strkit-sbdev/transform`. */
+/** Transform helpers. Deep import: `strkit/transform`. */
 import { assertString } from "../_internal/guards.js";
 import { randomFloat } from "../_internal/random.js";
 import { lines } from "../extract/index.js";

@@ -1,6 +1,6 @@
 /**
  * Discovery helpers — `help()` shows everything this kit can do.
- * Deep import: `strkit-sbdev/help`.
+ * Deep import: `strkit/help`.
  */
 import { META as caseMeta, CATEGORY_LABEL as caseLabel } from "../case/index.js";
 import { META as cleanMeta, CATEGORY_LABEL as cleanLabel } from "../clean/index.js";

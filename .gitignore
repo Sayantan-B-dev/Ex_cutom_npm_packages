@@ -1,0 +1,12 @@
+# Dependencies (all packages)
+node_modules/
+
+# npm pack artifacts
+*.tgz
+
+# Local playground — never commit, packages are tested there via file: installs
+package-playground/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db

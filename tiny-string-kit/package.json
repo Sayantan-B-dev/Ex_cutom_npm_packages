@@ -1,0 +1,61 @@
+{
+  "name": "tiny-string-kit-sbdev",
+  "version": "2.1.0",
+  "description": "Advanced, dependency-free JavaScript string toolkit (100+ helpers with built-in help())",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json",
+    "./src": "./src/index.js",
+    "./case": "./src/case/index.js",
+    "./clean": "./src/clean/index.js",
+    "./escape": "./src/escape/index.js",
+    "./fit": "./src/fit/index.js",
+    "./validate": "./src/validate/index.js",
+    "./measure": "./src/measure/index.js",
+    "./extract": "./src/extract/index.js",
+    "./transform": "./src/transform/index.js",
+    "./template": "./src/template/index.js",
+    "./encode": "./src/encode/index.js",
+    "./similarity": "./src/similarity/index.js",
+    "./mask": "./src/mask/index.js",
+    "./id": "./src/id/index.js",
+    "./help": "./src/help/index.js"
+  },
+  "files": [
+    "index.js",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "prepublishOnly": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sayantan-b-dev/tiny-string-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sayantan-b-dev/tiny-string-kit/issues"
+  },
+  "homepage": "https://github.com/sayantan-b-dev/tiny-string-kit#readme",
+  "author": "sayantan-b-dev",
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "string",
+    "utilities",
+    "slug",
+    "javascript",
+    "case-conversion",
+    "validation",
+    "template",
+    "fuzzy",
+    "mask",
+    "uuid"
+  ],
+  "license": "MIT"
+}
